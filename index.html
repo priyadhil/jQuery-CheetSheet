@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+      body {
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f4f4;
+        line-height: 1.5em;
+      }
+      header {
+        background: rgb(66, 65, 65);
+        color: rgb(245, 138, 17);
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #000;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+      #box {
+        
+        background: rgb(27, 26, 26);
+        color: #ffffff;
+        width: 500px;
+        height: 90px;
+        padding: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>jQuery</h1>
+    </header>
+    <div id="container">
+      <h1 id="heading1">Heading One</h1>
+      <p class="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt atque
+        a voluptate, enim eius similique aspernatur consequatur autem
+        <span
+          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
+          nemo.</span
+        >
+        laborum quidem obcaecati fugiat molestiae ullam id consectetur possimus,
+        dolores non harum!
+      </p>
+      <h1 id="heading2">Heading Two</h1>
+      <p class="para2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt atque
+        a voluptate, enim eius similique aspernatur consequatur autem
+        <span
+          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
+          nemo.</span
+        >
+        laborum quidem obcaecati fugiat molestiae ullam id consectetur possimus,
+        dolores non harum!
+      </p>
+      <ul id="list">
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+      </ul>
+      <input type="button" value="1" />
+      <input type="submit" value="2" />
+      <input type="text" name="" id="" />
+      <a href="http://google.com">Google</a>
+      <a href="http://google.com" id="g">yahoo</a>
+      <h3>Mouse Events</h3>
+      <button id="btn1">Btn1</button>
+      <button id="btn2">Btn2</button>
+      <p id="para3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veritatis
+        repudiandae deleniti laudantium rerum totam eius laborum nobis ratione,
+        aspernatur porro tempore. Obcaecati natus ut vel ab voluptatum
+        voluptatibus voluptates provident, dicta beatae doloribus, perspiciatis
+        dignissimos dolorem laborum praesentium deleniti.
+      </p>
+<hr>
+      <form>
+        <label>Name</label><br>
+        <input type="text" id="name"><br>
+        <label>Email</label></br>
+        <input type="text" id="email"><br>
+        <label>Gender</label></br>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div id="container">
+      <button id="btn3">
+Button 1
+      </button>
+      <p class="para4">this is a paragaraph</p>
+      <p class="para5">this is another paragraph</p>
+      <div id="myDiv"></div>
+      <input type="text" id="newItem">
+      <ul id="list1">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <a href="http://google.com" id="alink">Google</a>
+      <ul id="users"></ul>
+
+      <div id="container">
+        <button id="btnFadeOut">Fade Out</button>
+        <button id="btnFadeIn">Fade In</button>
+        <button id="btnFadeToggle">Fade Toggle</button>
+        <hr>
+        <div id="box">
+          <h1>Hello World</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+//JQUERY SELECTORS
+      // $('h1').hide();
+      // $("h1#heading1").hide();
+      // $("#heading2").hide();
+      // $("*").css("background", "#ccc");
+      // $("p span").css("color", "red");
+      // $("ul#list li:odd").css("color", "yellow");
+      // $("ul#list li:first").css("color", "green");
+      // $("ul#list li:last").css("color", "red");
+      // $("ul#list li:even").css("background", "#ccc");
+      // $("ul#list li:odd").css("background", "orange");
+      // $("ul#list li:nth-child(3n)").css("list-style", "none");
+
+      // $(":button").css("background", "orange");
+      // $(":submit").css("color", "red");
+      // // $(":text").css("background", "#333");
+      // $("[href]").css("color", "orange");
+      // $("a#g").css("color", "green");
+
+      // $("#btn1").click(function() {
+      //   alert("button clicked");
+      // });
+      // $("btn2").on("click", function() {
+      //   alert("button clicked");
+      // });
+      // $("#btn1").on("click", function() {
+      //   //$("#para3").hide();
+      //   $("#para3").toggle();
+      // });
+      // $("#btn2").on("click", function() {
+      //   //$("#para3").show();
+      //   $("#para3").toggle();
+      // });
+      // $("btn2").dblclick(function() {
+      //   $("#para3").toggle();
+      // });
+//JQUERY EVENTS
+      // $("btn1").hover(function() {
+      //   $("#para3").toggle();
+      // });
+      // $("#btn1").on("mouseenter", function() {
+      //   //$("#para3").hide();
+      //   $("#para3").toggle();
+      // });
+
+      // $("#btn1").on("mousedown", function() {
+      //   $("#para3").toggle();
+      // });
+
+      // $("#btn1").on("mouseup", function() {
+      //   $("#para3").toggle();
+      // // });
+      // $("#btn1").click(function(e) {
+      //   // console.log(e.currentTarget.id);
+      //   console.log(e.currentTarget.innerHTML);
+      //   console.log(e.currentTarget.className);
+      // });
+      // $("btn1*").on("mousemove", function(e) {
+      //   console.log("coords: Y: " + e.clientY + " X: " + e.clientX);
+      // });
+
+      $('input').focus(function(){
+  // alert('focus');
+        $(this).css('background', 'pink');
+});
+$('input').blur(function(){
+  // alert('focus');
+        $(this).css('background', 'white');
+});
+
+// $('input').keyup(function(e){
+//  console.log(e.target.value);
+// });
+// $('select#gender').change(function(e){
+//   alert(e.target.value);
+//         //$(this).css('background', 'pink');
+// });
+
+// $('form').submit(function(e){
+//   e.preventDefault();
+//   var name = $('input#name').val();
+//   console.log(name);
+// });
+
+//JQUERY DOM MANIPULATION
+
+ $('document').ready(function(){
+//   $('p.para4').css({color: 'white', background: 'pink'});
+//   $('p.para5').addClass('myClass');
+//   $('p.para5').removeClass('myClass');
+//   $('#btn3').click(function(){
+//     $('p.para5').toggleClass('myClass');
+//   });
+
+//   $('#myDiv').text('hello');
+//   $('#myDiv').html('<h1>hello </h1>');
+
+//   $('ul').append('<li>Append List</list>');
+//     $('ul').prepend('<li>prepend List</list>');
+//     $('.para4').appendTo('.para5');
+//    // $('.para5').prependTo('.para4');
+
+//     $('ul').before('<h4>Hello</h4>');
+//     $('ul').after('<h4>World</h4>');
+//     $('ul').empty();
+//     $('ul').dedatch();
+
+//     $('#alink').attr('target','_blank');
+//     alert($('#alink').attr('href'));
+//     $('#alink').removeAttr('target');
+//     $('p').wrap('<h1>');
+//     $('p').wrapAll('<h1>');
+
+    // $('#newItem').keyup(function(e){
+    //   var code = e.which;
+    //   if(code == 13){
+    //     e.preventDefault();
+    //     $('ul').append('<li>' +e.target.value +'</li>');
+    //   }
+    // });
+
+    // var myArr = ['priya', 'ravi','dhilan', 'family'];
+    // $.each(myArr, function(i, val){
+    //   $('#users').append('<li>' +val +'</li>');
+    // });
+
+    var newArr = $('ul#list1 li').toArray();
+    $.each(newArr, function(i, val){
+    console.log(val.innerHTML);
+    });
+
+//JQUERY EFFECTS & ANIMATE
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
