@@ -256,14 +256,21 @@ $('input').blur(function(){
     //   $('#users').append('<li>' +val +'</li>');
     // });
 
-    var newArr = $('ul#list1 li').toArray();
-    $.each(newArr, function(i, val){
-    console.log(val.innerHTML);
-    });
+    // var newArr = $('ul#list1 li').toArray();
+    // $.each(newArr, function(i, val){
+    // console.log(val.innerHTML);
+    // });
 
 //JQUERY EFFECTS & ANIMATE
 
-
+$('#btnFadeOut').click(function(){
+  // $('#box').fadeOut('slow');
+  // $('#box').fadeOut('fast');
+  // $('#box').fadeOut(3000);
+  $('#box').fadeOut(3000, function(){
+    S('#btnFadeOut').text('fadded out');
+  });
+});
 
 
 });
