@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Sample Konfabulator Widget",
+    "name": "main_window",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "title": "Sample Konfabulator Widget",
+    "name": "window",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "title": "Sample Konfabulator Widget",
+    "name": "main",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "title": "Sample Konfabulator Widget",
+    "name": "main_window",
+    "width": 500,
+    "height": 500
+  }
+]
